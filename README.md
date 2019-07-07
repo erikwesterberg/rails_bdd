@@ -1,8 +1,7 @@
 # Project Title
 
-Rails_Demo Challange
+Ruby on Rails Challange
 
-- Challange:
 * structure of a RoR application
 * params
 * migrations
@@ -14,13 +13,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Ruby on Rails](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Ruby on Rails](https://rubyonrails.org/) - The web framework used
 
 ## Authors
 
-* **Erik Westerberg** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Erik Westerberg** -- [GITHUB](https://github.com/erikwesterberg)
 
 ## License
 
