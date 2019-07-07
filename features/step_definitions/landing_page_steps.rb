@@ -1,4 +1,3 @@
-
 When("I visit the site") do
   visit root_path
 end
@@ -15,6 +14,10 @@ end
 
 When("I fill in {string} with {string}") do |field, content|
   fill_in field, with: content
+end
+
+When("I click on {string} link") do |string|
+click_link
 end
 
 

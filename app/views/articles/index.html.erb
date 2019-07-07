@@ -1,14 +1,22 @@
- <h1>AMAZING ARTICLES</h1>
 
-<% @articles.each do |article| %>
-<tr>
+<h1>AMAZING READ</h1>
+
+
+
+ 
+ 
+  <% @articles.each do |article| %>
+    <tr>
       <td><%= article.title %></td>
       <td><%= article.content %></td>
-      <td><%= link_to 'Show', article_path(article) %></td>
-      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      |<%= link_to "Show", article_path(article) %>|
+      |<%= link_to "Edit", edit_article_path(article) %>|
+      |<%= link_to "Destroy", article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>|
     </tr>
-<% end %>
+  <% end %>
 
+  <%= link_to 'New Article', new_article_path %>
 
-<%=link_to "New Article", new_article_path %>
  

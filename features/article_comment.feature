@@ -12,10 +12,12 @@ Scenario: View list of articles on the landing page
 Scenario: Reader can comment on articles
     When I visit the site
     Then I click "Show"
-    Then I should see "Add a comment:"
     And I fill in "Commenter" with "Jordan Peterson"
     And I fill in "Body" with "This was the shit."
     And I click on "Create Comment"
+    Then I should be on "landing" page
+    And I should see "Commenter: Jordan Peterson"
+    And I should see "Comment: This was the shit"
     
     
  
