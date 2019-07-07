@@ -19,6 +19,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'chromedriver-helper'
+  gem 'selenium-webdriver'
 end
 group :development do
   gem 'web-console', '>= 3.3.0'
