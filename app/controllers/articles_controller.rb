@@ -4,11 +4,23 @@ class ArticlesController < ApplicationController
   end
 
   def new
-<<<<<<< HEAD
-    @articles = Article.new
-end
-=======
     @article = Article.new
+end
+
+def create
+  article = Article.create(article_params)
+  if article.persisted?
+    flash[:notice] = 'Article was successfully created.'
+    redirect_to articles_path(article)
+  else
+    flash[:alert] =  article.errors.full_messages.to_sentence
+    redirect_to new_article_path 
   end
->>>>>>> 03f6adfd1e3aca5ef4c2553dc53bb15d65a5410b
+end
+
+private
+
+def article_params
+  params.require(:article).permit(:title, :content)
+  end
 end
