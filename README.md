@@ -1,24 +1,29 @@
-# README
+# Project Title
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails_Demo Challange
 
-Things you may want to cover:
+- Challange:
+* structure of a RoR application
+* params
+* migrations
+* routes (resources, members, etc)
 
-* Ruby version
+## Deployment
 
-* System dependencies
+Add additional notes about how to deploy this on a live system
 
-* Configuration
+## Built With
 
-* Database creation
+* [Ruby on Rails](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 
-* Database initialization
+## Authors
 
-* How to run the test suite
+* **Erik Westerberg** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-* Services (job queues, cache servers, search engines, etc.)
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-* Deployment instructions
+## License
 
-* ...
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
