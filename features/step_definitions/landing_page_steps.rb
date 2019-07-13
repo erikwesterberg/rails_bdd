@@ -8,15 +8,11 @@ Given("the following articles exists") do |table|
   end
 end
 
-Given("I click {string}") do |string|
-  click_on string
-end
-
 When("I fill in {string} with {string}") do |field, content|
   fill_in field, with: content
 end
 
-When("I click on {string} link") do |string|
+When("I click on {string}") do |string|
 click_link
 end
 
