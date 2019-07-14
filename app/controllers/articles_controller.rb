@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
+  before_action :article_owner, only: [:edit, :update, :destroy]
+
+
   def index
     @articles = Article.all
   end
@@ -8,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    @article = current_user.articles.build
   end
 
   def edit
@@ -16,15 +20,23 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
    
     if @article.save
       redirect_to @article
+      flash[:notice] = "Article was successfully created."
     else
       render 'new'
     end
   end
-
+  def article_owner
+    @article = Article.find(params[:id])
+    unless @article.user.id == current_user.id
+     flash[:notice] = 'Access denied as you are not owner of this article'
+     redirect_to articles_path
+    end
+   end
+                                          
   def update
     @article = Article.find(params[:id])
    
