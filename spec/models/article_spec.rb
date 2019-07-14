@@ -5,13 +5,12 @@ RSpec.describe Article, type: :model do
     it { is_expected.to have_db_column :id }
     it { is_expected.to have_db_column :title }
     it { is_expected.to have_db_column :content }
-    it { is_expected.to have_db_column :user }
   end
 
   describe 'Validations' do
     it { is_expected.to validate_presence_of :title }
     it { is_expected.to validate_presence_of :content } 
-    it { is_expected.to validate_presence_of :user  } 
+    it { should belong_to(:user) }
   end
 
   describe 'Factory' do
