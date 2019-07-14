@@ -28,6 +28,17 @@ When("I click on {string} button") do |button|
 click_on button
 end
 
+Then("I accept the alert") do 
+  page.driver.browser.switch_to.alert.accept
+end
+
+Given("i visit {string} page") do |string|
+  visit root_path
+end
+
+
+
+
 
 
 

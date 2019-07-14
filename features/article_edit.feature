@@ -3,16 +3,20 @@ Feature: Edit Article
   In order to correct articles
   I would like to be able to edit articles
 
-  Scenario: View list of articles on the landing page
-    Given the following articles exists
+Background:
+   Given the following articles exists
       | title                | content                          |
       | A breaking news item | Some really breaking action      |
+    And the following user exists
+      |  email          | password  | name  |
+      |  john@doe.com   | password1 | John  |
+    When I visit the site
+    And I am logged in as "John"
    
   Scenario: Editing articles
-    When I visit the site
-    And I click on "Edit" 
-    Then I fill in "Title" with "New Title"
+    When I click on "Edit" button
+    When I fill in "Title" with "New Title"
     And I fill in "Content" with "New Content"
-    And I click on "Update Article"
+    And I click on "Update Article" button
     Then I should see "New Title"
     And I should see "New Content"
