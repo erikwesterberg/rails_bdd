@@ -5,9 +5,9 @@ Feature: List articles on the landing page
 
   Background: View list of articles on the landing page
     Given the following articles exists
-      | title                | content                          |
-      | A breaking news item | Some really breaking action      |
-      | Learn Rails 5        | Build awesome rails applications |
+      | title                | content                          | 
+      | A breaking news item | Some really breaking action      |         
+      | Learn Rails 5        | Build awesome rails applications |    
      And the following user exists
       |  email          | password  | name  |
       |  john@doe.com   | password1 | John  |

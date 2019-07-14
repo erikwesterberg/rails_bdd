@@ -15,12 +15,17 @@ Given("the following user exists") do |table|
   end
 end
 
+Given("I am logged in as {string}") do |name|
+  user = User.find_by(name: name)
+  login_as(user, scope: :user)
+end
+
 When("I fill in {string} with {string}") do |field, content|
   fill_in field, with: content
 end
 
-When("I click on {string}") do |string|
-click_link
+When("I click on {string} button") do |button|
+click_on button
 end
 
 
