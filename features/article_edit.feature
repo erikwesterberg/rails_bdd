@@ -13,9 +13,10 @@ Background:
     When I visit the site
     And I am logged in as "John"
    
-  Scenario: Editing articles
+Scenario: Editing articles
     When I click on "Edit" button
-    When I fill in "Title" with "New Title"
+    Then I should see "Access denied as you are not owner of this article"
+    Then I fill in "Title" with "New Title"
     And I fill in "Content" with "New Content"
     And I click on "Update Article" button
     Then I should see "New Title"
